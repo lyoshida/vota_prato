@@ -20,7 +20,7 @@ class Restaurante < ActiveRecord::Base
   validate :primeira_letra_deve_ser_maiuscula
   private
   def primeira_letra_deve_ser_maiuscula
-  	errors.add(:nome, "primeira letra deve ser maiuscula") unless nome=~ /[A-Z].*/
+  	errors.add(:nome, "primeira letra deve ser maiuscula") unless nome=~ /[A-Z].*/ #/\A[A-Z].*\z/
   end
 
   #validates :sexo, :inclusion => {:in => %w{m f}} # %w{m f} é equivalente a ["m", "f"]
@@ -34,7 +34,7 @@ class Restaurante < ActiveRecord::Base
 
   #validates :senha, :confirmation=>true
   
- =begin
+=begin
   validate :valida_cpf # validate sem o s para metodos customizados
   private
 

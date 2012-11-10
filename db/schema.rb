@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20121110114637) do
     t.string   "endereco"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
-    t.string   "especialidade"
+    t.string   "especialidade", :limit => 40
   end
 
 end

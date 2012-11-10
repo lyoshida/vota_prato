@@ -1,3 +1,4 @@
+#coding:utf-8
 class Prato < ActiveRecord::Base
   attr_accessible :nome
 

@@ -1,3 +1,4 @@
+#coding: utf-8
 class Receita < ActiveRecord::Base
   attr_accessible :prato_id, :conteudo
 

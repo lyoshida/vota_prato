@@ -1,3 +1,4 @@
+#coding:utf-8
 class Cliente < ActiveRecord::Base
   attr_accessible :nome, :idade
 

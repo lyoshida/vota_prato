@@ -3,7 +3,7 @@ class Restaurante < ActiveRecord::Base
   # é possivel criar um Restaurante com mass assignment se tiver apenas nome e endereco 
   attr_accessible :nome, :endereco, :especialidade
 
-  has_many :qualificacoes
+  has_many :qualificacoes, :dependent => :destroy
   has_and_belongs_to_many :pratos
 
   validates_length_of :nome, :maximum => 80

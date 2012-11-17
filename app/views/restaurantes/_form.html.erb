@@ -1,0 +1,8 @@
+<%# Nesse caso 'restaurante é uma variavel local. mostra.html.erb passa um valor %>
+
+<%= form_for restaurante do |f| %>
+Nome: <%= f.text_field :nome %><br/>
+Endereço: <%= f.text_field :endereco %><br/>
+Especialidade: <%= f.text_field :especialidade %><br/>
+<%= f.submit %>
+<% end %>

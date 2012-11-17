@@ -59,5 +59,7 @@ VotaPrato::Application.routes.draw do
   match '/hello_world' => 'hello_world#hello_world' #usar sempre aspas simples
   match '/hello_world' => 'hello_world#hello_world', as: 'banana' # nome para ser usado no link_to, referenciar banana_path
 
+  match '/mostra' => 'restaurantes#mostra'
+
   resources :restaurantes #cria as rotas para CRUD restaurantes
 end

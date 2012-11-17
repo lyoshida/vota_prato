@@ -1,0 +1,20 @@
+<h1>Listagem de Restaurantes</h1>
+
+<table>
+	<tr>
+		<th>Nome</th>
+		<th>Endereço</th>
+		<th>Especialidade</th>
+	</tr>
+
+	<%# restaurantes.each do |restaurante| %>
+		<%# render @restaurantes %>
+		<!-- ou -->
+		<%= render :partial => 'restaurante', :collection=> @restaurantes %>
+		<%# passando uma colecao para o render, ele procura um partial form com nome_restaurante e processa %>
+	<%# end %>
+
+</table>
+
+<br/>
+<%= link_to 'Novo', action: 'new' %>

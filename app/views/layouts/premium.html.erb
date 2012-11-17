@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VotaPrato</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p style="color:red;">premium</p>
+<!-- <a href="<%= root_path %>">Home</a>  -->
+<%= link_to 'Home', root_path %> <!-- melhor maneira, ja faz internacionalizacao -->
+<%= yield %>
+
+
+</body>
+</html>

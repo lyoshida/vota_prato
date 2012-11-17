@@ -40,4 +40,8 @@ class RestaurantesController < ApplicationController
 
 		redirect_to(action: "index")
 	end
+
+	def mostra
+		@coisa = Restaurante.first
+	end
 end

@@ -62,4 +62,13 @@ VotaPrato::Application.routes.draw do
   match '/mostra' => 'restaurantes#mostra'
 
   resources :restaurantes #cria as rotas para CRUD restaurantes
+
+  # se eu fizer: 
+  #resources :restaurantes do
+  # resources :qualificacoes
+  #end 
+  # consigo rotas /restaurantes/1/qualificacoes
+
+  match '/posts(/:ano)' => 'posts#index'
+
 end

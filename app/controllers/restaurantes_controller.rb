@@ -1,7 +1,15 @@
 class RestaurantesController < ApplicationController
 	
+	#layout 'premium', :only => :new
+	#before_filter :loga, :only => [:new, :edit]
+	#after_filter :loga_de_novo
+	#around_filter :around # o around filter passa a action como bloco para a funcao
+	
+	#respond_to :xml, :json, :html
+
 	def index
 		@restaurantes = Restaurante.order("nome")
+		#respond_with @restaurantes #(para usar com respond_to chamo restaurantes.json)
 	end
 
 	def show
@@ -10,6 +18,11 @@ class RestaurantesController < ApplicationController
 
 	def new
 		@restaurante = Restaurante.new
+		# if 1==2
+		# 	render :new, :layout => 'premium'
+		# else
+		# 	render :new
+		# end
 	end
 
 	def create
@@ -44,4 +57,19 @@ class RestaurantesController < ApplicationController
 	def mostra
 		@coisa = Restaurante.first
 	end
+
+	private
+	def loga
+		puts "*"*100
+	end
+
+	def loga_de_novo
+		puts "de novo!"*20
+	end
+
+	# def around
+	# 	?
+	# 	yield
+	# 	?
+	# end
 end

@@ -1,0 +1,18 @@
+<h1>Hello, world!</h1>
+
+<!-- executa mas nao imprime nada na tela -->
+<% 2 + 2 %>
+
+<!-- imprime na tela -->
+<%= 2+2 %>
+
+<h3> Agora é exatamente <%= @hora %>!</h3>
+
+<!--a view tem acesso a todos os modelos do projeto mas nao é recomendavel acessar diretamente-->
+<%= Restaurante.first.nome %><br>
+<%= @primeiro_restaurante.nome %>
+<br>
+<%= root_url %><br>
+<%= root_path %>
+
+<%= link_to 'Home', banana_path %>

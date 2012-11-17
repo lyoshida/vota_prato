@@ -48,11 +48,16 @@ VotaPrato::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'hello_world#hello_world'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  
+  match '/hello_world' => 'hello_world#hello_world' #usar sempre aspas simples
+  match '/hello_world' => 'hello_world#hello_world', as: 'banana' # nome para ser usado no link_to, referenciar banana_path
+
+  resources :restaurantes #cria as rotas para CRUD restaurantes
 end

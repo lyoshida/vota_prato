@@ -8,7 +8,7 @@ class RestaurantesController < ApplicationController
 	#respond_to :xml, :json, :html
 
 	def index
-		@restaurantes = Restaurante.order("nome")
+		@restaurantes = Restaurante.order("nome").page(params['page']).per(3)
 		#respond_with @restaurantes #(para usar com respond_to chamo restaurantes.json)
 	end
 

@@ -22,6 +22,7 @@
   <div class="field">
     <%= f.label :comentavel_type %><br />
     <%= f.text_field :comentavel_type %>
+    <%# f.collection_select(:restaurante_id, Restaurante.order('nome'), :id, :nome) %>
   </div>
   <div class="actions">
     <%= f.submit %>

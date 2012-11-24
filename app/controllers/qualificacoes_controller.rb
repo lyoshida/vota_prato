@@ -1,6 +1,9 @@
 class QualificacoesController < ApplicationController
   # GET /qualificacoes
   # GET /qualificacoes.json
+    
+  before_filter :carrega_clientes_restaurantes, {except: [:show, :index, :destroy]}
+
   def index
     @qualificacoes = Qualificacao.all
 
@@ -88,4 +91,11 @@ class QualificacoesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+  def carrega_clientes_restaurantes
+    @clientes = Cliente.order :nome
+    @restaurantes = Restaurante.order :nome
+  end
+
 end

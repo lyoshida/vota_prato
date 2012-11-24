@@ -26,6 +26,8 @@ class Restaurante < ActiveRecord::Base
   	errors.add(:nome, "primeira letra deve ser maiuscula") unless nome=~ /[A-Z].*/ #/\A[A-Z].*\z/
   end
 
+  has_many :comentarios, as: :comentavel
+
   #validates :sexo, :inclusion => {:in => %w{m f}} # %w{m f} é equivalente a ["m", "f"]
   #validates :telefone, :format => {:with => /regex/}
   #validates :senha, :length => {:in => (6..10), :too_short "muito curto", :too_long "muito longo"}

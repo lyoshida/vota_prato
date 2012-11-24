@@ -19,7 +19,8 @@
       <%= f.hidden_field 'cliente_id' %>
     <% else %>
       <p><%= f.label :cliente_id %><br/>
-    <%= f.collection_select(:cliente_id, Cliente.order('nome'), :id, :nome, {:prompt => true})%> </p>
+    <%# f.collection_select(:cliente_id, Cliente.order('nome'), :id, :nome, {:prompt => true})%> </p>
+    <%= f.collection_select :cliente_id, @clientes, :id, :nome %>
     <% end %>
   </div>
   <div class="field">

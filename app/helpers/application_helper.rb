@@ -11,4 +11,8 @@ module ApplicationHelper
 		menu_principal << "</ul>"
 		raw menu_principal # raw nao dá escape outra forma eh chamar menu_principal.html_safe
 	end
+
+	def valor_formatado(number)
+		number_to_currency(number, :unit => "R$", :separator => ",", :delimiter => ".")
+	end
 end

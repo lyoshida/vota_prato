@@ -9,6 +9,6 @@ module ApplicationHelper
 			menu_principal << "</li>"
 		end
 		menu_principal << "</ul>"
-		raw menu_principal
+		raw menu_principal # raw nao dá escape outra forma eh chamar menu_principal.html_safe
 	end
 end

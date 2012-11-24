@@ -2,12 +2,14 @@
 
 <p>
   <b>Cliente:</b>
-  <%= @qualificacao.cliente_id %>
+  <%# @qualificacao.cliente_id %>
+  <%= @qualificacao.cliente.nome %>
 </p>
 
 <p>
   <b>Restaurante:</b>
-  <%= @qualificacao.restaurante_id %>
+  <%# @qualificacao.restaurante_id %>
+  <%= @qualificacao.restaurante.nome %>
 </p>
 
 <p>
@@ -20,6 +22,9 @@
   <%= @qualificacao.valor_gasto %>
 </p>
 
+<% link_to "Nova qualificacao", :controller => "qualificacoes",
+								:action => "new",
+								:cliente => @cliente %>
 
 <%= link_to 'Edit', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Back', qualificacoes_path %>

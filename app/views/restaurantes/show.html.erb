@@ -22,4 +22,10 @@
 <%= link_to 'Editar', action: 'edit', id:@restaurante  %>
 <%= link_to 'Voltar', action: 'index'  %>
 
-<%= comentarios @restaurante %>
+<%# comentarios @restaurante %>
+
+<% unless @restaurante.comentarios.empty? %>
+	<%= comentarios @restaurante %>
+<% end %>
+
+<%= novo_comentario(@restaurante) %>
